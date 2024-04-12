@@ -560,6 +560,30 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/halo/proprietary/vendor/etc/ssg/tz_whitelist.json:$(TARGET_COPY_OUT_VENDOR)/etc/ssg/tz_whitelist.json \
     vendor/lenovo/halo/proprietary/vendor/etc/telephony_packages.xml:$(TARGET_COPY_OUT_VENDOR)/etc/telephony_packages.xml \
     vendor/lenovo/halo/proprietary/vendor/etc/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf \
+    vendor/lenovo/halo/proprietary/vendor/etc/thermal-engine_battery_0.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine_battery_0.conf \
+    vendor/lenovo/halo/proprietary/vendor/etc/thermal-engine_battery_1.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine_battery_1.conf \
+    vendor/lenovo/halo/proprietary/vendor/etc/thermal-engine_battery_2.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine_battery_2.conf \
+    vendor/lenovo/halo/proprietary/vendor/etc/thermal-engine_common_0.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine_common_0.conf \
+    vendor/lenovo/halo/proprietary/vendor/etc/thermal-engine_common_1.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine_common_1.conf \
+    vendor/lenovo/halo/proprietary/vendor/etc/thermal-engine_cpu_0.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine_cpu_0.conf \
+    vendor/lenovo/halo/proprietary/vendor/etc/thermal-engine_cpu_1.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine_cpu_1.conf \
+    vendor/lenovo/halo/proprietary/vendor/etc/thermal-engine_cpu_2.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine_cpu_2.conf \
+    vendor/lenovo/halo/proprietary/vendor/etc/thermal-engine_cpu_3.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine_cpu_3.conf \
+    vendor/lenovo/halo/proprietary/vendor/etc/thermal-engine_cpu_4.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine_cpu_4.conf \
+    vendor/lenovo/halo/proprietary/vendor/etc/thermal-engine_cpu_5.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine_cpu_5.conf \
+    vendor/lenovo/halo/proprietary/vendor/etc/thermal-engine_cpu_6.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine_cpu_6.conf \
+    vendor/lenovo/halo/proprietary/vendor/etc/thermal-engine_cpu_7.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine_cpu_7.conf \
+    vendor/lenovo/halo/proprietary/vendor/etc/thermal-engine_cpu_8.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine_cpu_8.conf \
+    vendor/lenovo/halo/proprietary/vendor/etc/thermal-engine_cpu_9.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine_cpu_9.conf \
+    vendor/lenovo/halo/proprietary/vendor/etc/thermal-engine_fan_0.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine_fan_0.conf \
+    vendor/lenovo/halo/proprietary/vendor/etc/thermal-engine_gpu_0.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine_gpu_0.conf \
+    vendor/lenovo/halo/proprietary/vendor/etc/thermal-engine_gpu_1.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine_gpu_1.conf \
+    vendor/lenovo/halo/proprietary/vendor/etc/thermal-engine_gpu_2.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine_gpu_2.conf \
+    vendor/lenovo/halo/proprietary/vendor/etc/thermal-engine_gpu_3.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine_gpu_3.conf \
+    vendor/lenovo/halo/proprietary/vendor/etc/thermal-engine_gpu_4.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine_gpu_4.conf \
+    vendor/lenovo/halo/proprietary/vendor/etc/thermal-engine_sensor_0.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine_sensor_0.conf \
+    vendor/lenovo/halo/proprietary/vendor/etc/thermal-engine_sensor_1.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine_sensor_1.conf \
+    vendor/lenovo/halo/proprietary/vendor/etc/thermal_user_case.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_user_case.conf \
     vendor/lenovo/halo/proprietary/vendor/etc/wfdconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/wfdconfig.xml \
     vendor/lenovo/halo/proprietary/vendor/etc/wifi/icm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/icm.conf \
     vendor/lenovo/halo/proprietary/vendor/etc/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
@@ -1600,6 +1624,7 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/halo/proprietary/vendor/lib64/libtensorflowlite.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtensorflowlite.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/libtestutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtestutils.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/libtfestriping.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtfestriping.so \
+    vendor/lenovo/halo/proprietary/vendor/lib64/libthermalclient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libthermalclient.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/libthreadutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libthreadutils.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/libtime_genoff.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtime_genoff.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/libtinyxml2_1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtinyxml2_1.so \
@@ -1832,11 +1857,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libagm \
     libar-pal \
-    libthermalclient \
     libvmmem \
     vendor.qti.hardware.AGMIPC@1.0-impl \
     libfastcvopt \
-    liblmthermallistner \
     CACertService \
     CneApp \
     IWlanService \
