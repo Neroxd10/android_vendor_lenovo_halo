@@ -6,7 +6,6 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/lenovo/halo
 
 PRODUCT_COPY_FILES += \
-    vendor/lenovo/halo/proprietary/odm/etc/aac_richtap.config:$(TARGET_COPY_OUT_ODM)/etc/aac_richtap.config \
     vendor/lenovo/halo/proprietary/product/etc/permissions/UimGba.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/UimGba.xml \
     vendor/lenovo/halo/proprietary/product/etc/permissions/UimGbaManager.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/UimGbaManager.xml \
     vendor/lenovo/halo/proprietary/product/etc/permissions/UimService.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/UimService.xml \
@@ -18,6 +17,7 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/halo/proprietary/system_ext/etc/init/dpmd.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/dpmd.rc \
     vendor/lenovo/halo/proprietary/system_ext/etc/init/tcmd.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/tcmd.rc \
     vendor/lenovo/halo/proprietary/system_ext/etc/init/wfdservice.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/wfdservice.rc \
+    vendor/lenovo/halo/proprietary/system_ext/etc/permissions/audiosphere.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/audiosphere.xml \
     vendor/lenovo/halo/proprietary/system_ext/etc/permissions/com.qti.dpmframework.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.qti.dpmframework.xml \
     vendor/lenovo/halo/proprietary/system_ext/etc/permissions/dpmapi.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/dpmapi.xml \
     vendor/lenovo/halo/proprietary/system_ext/etc/permissions/qcrilhook.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/qcrilhook.xml \
@@ -83,6 +83,7 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/halo/proprietary/vendor/bin/engine-service:$(TARGET_COPY_OUT_VENDOR)/bin/engine-service \
     vendor/lenovo/halo/proprietary/vendor/bin/feature_enabler_client:$(TARGET_COPY_OUT_VENDOR)/bin/feature_enabler_client \
     vendor/lenovo/halo/proprietary/vendor/bin/garden_app:$(TARGET_COPY_OUT_VENDOR)/bin/garden_app \
+    vendor/lenovo/halo/proprietary/vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.biometrics.fingerprint@2.1-service \
     vendor/lenovo/halo/proprietary/vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.bluetooth@1.0-service-qti \
     vendor/lenovo/halo/proprietary/vendor/bin/hw/android.hardware.drm@1.4-service.widevine:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.drm@1.4-service.widevine \
     vendor/lenovo/halo/proprietary/vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.gatekeeper@1.0-service-qti \
@@ -108,11 +109,10 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/halo/proprietary/vendor/bin/hw/vendor.qti.hardware.soter@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.soter@1.0-service \
     vendor/lenovo/halo/proprietary/vendor/bin/hw/vendor.qti.hardware.trustedui@1.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.trustedui@1.0-service-qti \
     vendor/lenovo/halo/proprietary/vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti \
-    vendor/lenovo/halo/proprietary/vendor/bin/hw/vendor.qti.hardware.vibrator.service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.vibrator.service \
-    vendor/lenovo/halo/proprietary/vendor/bin/hw/vendor.qti.hardware.vibrator_dual@1.2-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.vibrator_dual@1.2-service \
     vendor/lenovo/halo/proprietary/vendor/bin/hw/vendor.qti.media.c2@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.media.c2@1.0-service \
     vendor/lenovo/halo/proprietary/vendor/bin/hw/vendor.qti.media.c2audio@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.media.c2audio@1.0-service \
     vendor/lenovo/halo/proprietary/vendor/bin/hw/vendor.qti.secure_element@1.2-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.secure_element@1.2-service \
+    vendor/lenovo/halo/proprietary/vendor/bin/hw/vendor.zui.hardware.ifaa@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.zui.hardware.ifaa@1.0-service \
     vendor/lenovo/halo/proprietary/vendor/bin/ims_rtp_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/ims_rtp_daemon \
     vendor/lenovo/halo/proprietary/vendor/bin/imsdaemon:$(TARGET_COPY_OUT_VENDOR)/bin/imsdaemon \
     vendor/lenovo/halo/proprietary/vendor/bin/init.kernel.post_boot-cape.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.kernel.post_boot-cape.sh \
@@ -196,6 +196,8 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/halo/proprietary/vendor/etc/acdbdata/waipio_mtp/MTP_acdb_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/waipio_mtp/MTP_acdb_cal.acdb \
     vendor/lenovo/halo/proprietary/vendor/etc/acdbdata/waipio_mtp/MTP_workspaceFileXml.qwsp:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/waipio_mtp/MTP_workspaceFileXml.qwsp \
     vendor/lenovo/halo/proprietary/vendor/etc/apdr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/apdr.conf \
+    vendor/lenovo/halo/proprietary/vendor/etc/audio/sku_cape/resourcemanager_waipio_mtp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_cape/resourcemanager_waipio_mtp.xml \
+    vendor/lenovo/halo/proprietary/vendor/etc/backend_conf.xml:$(TARGET_COPY_OUT_VENDOR)/etc/backend_conf.xml \
     vendor/lenovo/halo/proprietary/vendor/etc/batching.conf:$(TARGET_COPY_OUT_VENDOR)/etc/batching.conf \
     vendor/lenovo/halo/proprietary/vendor/etc/cacert_location.pem:$(TARGET_COPY_OUT_VENDOR)/etc/cacert_location.pem \
     vendor/lenovo/halo/proprietary/vendor/etc/camera/3840black.UBWCTP10:$(TARGET_COPY_OUT_VENDOR)/etc/camera/3840black.UBWCTP10 \
@@ -203,6 +205,7 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/halo/proprietary/vendor/etc/camera/cal_w48_u16_default.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cal_w48_u16_default.bin \
     vendor/lenovo/halo/proprietary/vendor/etc/camera/camxoverridesettings.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camxoverridesettings.txt \
     vendor/lenovo/halo/proprietary/vendor/etc/camera/eisoverridesettings.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/eisoverridesettings.txt \
+    vendor/lenovo/halo/proprietary/vendor/etc/card-defs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/card-defs.xml \
     vendor/lenovo/halo/proprietary/vendor/etc/charger_fw_fstab.qti:$(TARGET_COPY_OUT_VENDOR)/etc/charger_fw_fstab.qti \
     vendor/lenovo/halo/proprietary/vendor/etc/cne/mwqem.conf:$(TARGET_COPY_OUT_VENDOR)/etc/cne/mwqem.conf \
     vendor/lenovo/halo/proprietary/vendor/etc/cne/profileMwqem.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/profileMwqem.xml \
@@ -258,6 +261,7 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/halo/proprietary/vendor/etc/gpfspath_oem_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gpfspath_oem_config.xml \
     vendor/lenovo/halo/proprietary/vendor/etc/gps.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps.conf \
     vendor/lenovo/halo/proprietary/vendor/etc/init.qti.fm.sh:$(TARGET_COPY_OUT_VENDOR)/etc/init.qti.fm.sh \
+    vendor/lenovo/halo/proprietary/vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc \
     vendor/lenovo/halo/proprietary/vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.0-service-qti.rc \
     vendor/lenovo/halo/proprietary/vendor/etc/init/android.hardware.drm@1.1-service.wfdhdcp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.1-service.wfdhdcp.rc \
     vendor/lenovo/halo/proprietary/vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.4-service.widevine.rc \
@@ -318,8 +322,6 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/halo/proprietary/vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.soter@1.0-service.rc \
     vendor/lenovo/halo/proprietary/vendor/etc/init/vendor.qti.hardware.trustedui@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.trustedui@1.0-service-qti.rc \
     vendor/lenovo/halo/proprietary/vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc \
-    vendor/lenovo/halo/proprietary/vendor/etc/init/vendor.qti.hardware.vibrator.service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.vibrator.service.rc \
-    vendor/lenovo/halo/proprietary/vendor/etc/init/vendor.qti.hardware.vibrator_dual@1.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.vibrator_dual@1.2-service.rc \
     vendor/lenovo/halo/proprietary/vendor/etc/init/vendor.qti.media.c2@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.media.c2@1.0-service.rc \
     vendor/lenovo/halo/proprietary/vendor/etc/init/vendor.qti.media.c2audio@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.media.c2audio@1.0-service.rc \
     vendor/lenovo/halo/proprietary/vendor/etc/init/vendor.qti.qspmhal@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.qspmhal@1.0-service.rc \
@@ -328,6 +330,7 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/halo/proprietary/vendor/etc/init/vendor.qti.tftp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.tftp.rc \
     vendor/lenovo/halo/proprietary/vendor/etc/init/vendor.sensors.qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.sensors.qti.rc \
     vendor/lenovo/halo/proprietary/vendor/etc/init/vendor.sensors.sscrpcd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.sensors.sscrpcd.rc \
+    vendor/lenovo/halo/proprietary/vendor/etc/init/vendor.zui.hardware.ifaa@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.zui.hardware.ifaa@1.0-service.rc \
     vendor/lenovo/halo/proprietary/vendor/etc/init/vppservice.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vppservice.rc \
     vendor/lenovo/halo/proprietary/vendor/etc/init/wfdvndservice.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/wfdvndservice.rc \
     vendor/lenovo/halo/proprietary/vendor/etc/izat.conf:$(TARGET_COPY_OUT_VENDOR)/etc/izat.conf \
@@ -343,47 +346,6 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/halo/proprietary/vendor/etc/lm/SilkyScrollsFeature.xml:$(TARGET_COPY_OUT_VENDOR)/etc/lm/SilkyScrollsFeature.xml \
     vendor/lenovo/halo/proprietary/vendor/etc/lm/sPLHFeature.xml:$(TARGET_COPY_OUT_VENDOR)/etc/lm/sPLHFeature.xml \
     vendor/lenovo/halo/proprietary/vendor/etc/lowi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/lowi.conf \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/1mic/LVACFS_Calibration360.dat:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/1mic/LVACFS_Calibration360.dat \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/1mic/LVACFS_Configuration.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/1mic/LVACFS_Configuration.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID10_He_USB_Digital_48K.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID10_He_USB_Digital_48K.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID11_He_USB_Digital_16K.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID11_He_USB_Digital_16K.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID12_He_BT_16K.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID12_He_BT_16K.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID1_MIC_HDR_standard.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID1_MIC_HDR_standard.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID2_MIC_HDR_voicefocus.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID2_MIC_HDR_voicefocus.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID3_MIC_HDR_wideband.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID3_MIC_HDR_wideband.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID5_MIC_Normal.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID5_MIC_Normal.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID6_MIC_App.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID6_MIC_App.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID7_MIC_He.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID7_MIC_He.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID8_MIC_He_App.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID8_MIC_He_App.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID9_He_Unprocess.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID9_He_Unprocess.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/2mic/4mic/LVACFS_Calibration360.dat:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/4mic/LVACFS_Calibration360.dat \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/2mic/4mic/LVACFS_Configuration.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/4mic/LVACFS_Configuration.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/2mic/4mic/LVIMFS_Parameter_xxxx_ID1_MIC_HDR_standard.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/4mic/LVIMFS_Parameter_xxxx_ID1_MIC_HDR_standard.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/2mic/4mic/LVIMFS_Parameter_xxxx_ID2_MIC_HDR_voicefocus.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/4mic/LVIMFS_Parameter_xxxx_ID2_MIC_HDR_voicefocus.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/2mic/4mic/LVIMFS_Parameter_xxxx_ID3_MIC_HDR_wideband.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/4mic/LVIMFS_Parameter_xxxx_ID3_MIC_HDR_wideband.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/2mic/4mic/LVIMFS_Parameter_xxxx_ID4_MIC_Cam.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/4mic/LVIMFS_Parameter_xxxx_ID4_MIC_Cam.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/2mic/4mic/audiozoom_2.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/4mic/audiozoom_2.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/2mic/LVACFS_Calibration360_2mic.dat:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/LVACFS_Calibration360_2mic.dat \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/2mic/LVACFS_Configuration.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/LVACFS_Configuration.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID10_He_USB_Digital_48K.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID10_He_USB_Digital_48K.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID11_He_USB_Digital_16K.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID11_He_USB_Digital_16K.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID12_He_BT_16K.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID12_He_BT_16K.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID1_MIC_HDR_standard.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID1_MIC_HDR_standard.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID2_MIC_HDR_voicefocus.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID2_MIC_HDR_voicefocus.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID3_MIC_HDR_wideband.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID3_MIC_HDR_wideband.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID5_MIC_Normal.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID5_MIC_Normal.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID6_MIC_App.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID6_MIC_App.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID7_MIC_He.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID7_MIC_He.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID8_MIC_He_App.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID8_MIC_He_App.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID9_He_Unprocess.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID9_He_Unprocess.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/4mic/LVACFS_Calibration360.dat:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/4mic/LVACFS_Calibration360.dat \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/4mic/LVACFS_Configuration.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/4mic/LVACFS_Configuration.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/4mic/LVIMFS_Parameter_xxxx_ID13_MIC_Cam_front.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/4mic/LVIMFS_Parameter_xxxx_ID13_MIC_Cam_front.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/4mic/LVIMFS_Parameter_xxxx_ID1_MIC_HDR_standard.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/4mic/LVIMFS_Parameter_xxxx_ID1_MIC_HDR_standard.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/4mic/LVIMFS_Parameter_xxxx_ID2_MIC_HDR_voicefocus.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/4mic/LVIMFS_Parameter_xxxx_ID2_MIC_HDR_voicefocus.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/4mic/LVIMFS_Parameter_xxxx_ID3_MIC_HDR_wideband.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/4mic/LVIMFS_Parameter_xxxx_ID3_MIC_HDR_wideband.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/4mic/LVIMFS_Parameter_xxxx_ID4_MIC_Cam_back.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/4mic/LVIMFS_Parameter_xxxx_ID4_MIC_Cam_back.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/4mic/audiozoom_4.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/4mic/audiozoom_4.txt \
     vendor/lenovo/halo/proprietary/vendor/etc/media_cape/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/media_cape/video_system_specs.json \
     vendor/lenovo/halo/proprietary/vendor/etc/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
     vendor/lenovo/halo/proprietary/vendor/etc/media_codecs_c2_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2_audio.xml \
@@ -399,6 +361,7 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/halo/proprietary/vendor/etc/media_profiles_ukee.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_ukee.xml \
     vendor/lenovo/halo/proprietary/vendor/etc/media_taro/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/media_taro/video_system_specs.json \
     vendor/lenovo/halo/proprietary/vendor/etc/media_ukee/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/media_ukee/video_system_specs.json \
+    vendor/lenovo/halo/proprietary/vendor/etc/microphone_characteristics.xml:$(TARGET_COPY_OUT_VENDOR)/etc/microphone_characteristics.xml \
     vendor/lenovo/halo/proprietary/vendor/etc/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf \
     vendor/lenovo/halo/proprietary/vendor/etc/perf/avcsysnodesconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/avcsysnodesconfigs.xml \
     vendor/lenovo/halo/proprietary/vendor/etc/perf/commonresourceconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/commonresourceconfigs.xml \
@@ -579,6 +542,7 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/halo/proprietary/vendor/etc/thermal-engine_sensor_0.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine_sensor_0.conf \
     vendor/lenovo/halo/proprietary/vendor/etc/thermal-engine_sensor_1.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine_sensor_1.conf \
     vendor/lenovo/halo/proprietary/vendor/etc/thermal_user_case.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_user_case.conf \
+    vendor/lenovo/halo/proprietary/vendor/etc/usecaseKvManager.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usecaseKvManager.xml \
     vendor/lenovo/halo/proprietary/vendor/etc/wfdconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/wfdconfig.xml \
     vendor/lenovo/halo/proprietary/vendor/etc/wifi/icm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/icm.conf \
     vendor/lenovo/halo/proprietary/vendor/etc/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
@@ -613,21 +577,6 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/halo/proprietary/vendor/firmware/CAMERA_ICP.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/CAMERA_ICP.mdt \
     vendor/lenovo/halo/proprietary/vendor/firmware/CAMERA_ICP_170.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/CAMERA_ICP_170.elf \
     vendor/lenovo/halo/proprietary/vendor/firmware/CAMERA_ICP_480.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/CAMERA_ICP_480.elf \
-    vendor/lenovo/halo/proprietary/vendor/firmware/a660_sqe.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/a660_sqe.fw \
-    vendor/lenovo/halo/proprietary/vendor/firmware/a662_gmu.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/a662_gmu.bin \
-    vendor/lenovo/halo/proprietary/vendor/firmware/a662_zap.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/a662_zap.b00 \
-    vendor/lenovo/halo/proprietary/vendor/firmware/a662_zap.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/a662_zap.b01 \
-    vendor/lenovo/halo/proprietary/vendor/firmware/a662_zap.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/a662_zap.b02 \
-    vendor/lenovo/halo/proprietary/vendor/firmware/a662_zap.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/a662_zap.elf \
-    vendor/lenovo/halo/proprietary/vendor/firmware/a662_zap.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/a662_zap.mbn \
-    vendor/lenovo/halo/proprietary/vendor/firmware/a662_zap.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/a662_zap.mdt \
-    vendor/lenovo/halo/proprietary/vendor/firmware/a710_sqe.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/a710_sqe.fw \
-    vendor/lenovo/halo/proprietary/vendor/firmware/a710_zap.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/a710_zap.b00 \
-    vendor/lenovo/halo/proprietary/vendor/firmware/a710_zap.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/a710_zap.b01 \
-    vendor/lenovo/halo/proprietary/vendor/firmware/a710_zap.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/a710_zap.b02 \
-    vendor/lenovo/halo/proprietary/vendor/firmware/a710_zap.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/a710_zap.elf \
-    vendor/lenovo/halo/proprietary/vendor/firmware/a710_zap.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/a710_zap.mbn \
-    vendor/lenovo/halo/proprietary/vendor/firmware/a710_zap.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/a710_zap.mdt \
     vendor/lenovo/halo/proprietary/vendor/firmware/a730_sqe.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/a730_sqe.fw \
     vendor/lenovo/halo/proprietary/vendor/firmware/a730_zap.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/a730_zap.b00 \
     vendor/lenovo/halo/proprietary/vendor/firmware/a730_zap.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/a730_zap.b01 \
@@ -838,7 +787,6 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/halo/proprietary/vendor/lib/egl/libq3dtools_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/libq3dtools_adreno.so \
     vendor/lenovo/halo/proprietary/vendor/lib/egl/libq3dtools_esx.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/libq3dtools_esx.so \
     vendor/lenovo/halo/proprietary/vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.qti.hardware.fm@1.0-impl.so \
-    vendor/lenovo/halo/proprietary/vendor/lib/hw/vibrator.default.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vibrator.default.so \
     vendor/lenovo/halo/proprietary/vendor/lib/hw/vulkan.adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vulkan.adreno.so \
     vendor/lenovo/halo/proprietary/vendor/lib/libCB.so:$(TARGET_COPY_OUT_VENDOR)/lib/libCB.so \
     vendor/lenovo/halo/proprietary/vendor/lib/libOpenCL.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOpenCL.so \
@@ -1131,7 +1079,7 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/halo/proprietary/vendor/lib64/hw/camera.qcom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/camera.qcom.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/hw/com.dsi.ant@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/com.dsi.ant@1.0-impl.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/hw/com.qti.chi.override.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/com.qti.chi.override.so \
-    vendor/lenovo/halo/proprietary/vendor/lib64/hw/sound_trigger.primary.taro.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/sound_trigger.primary.taro.so \
+    vendor/lenovo/halo/proprietary/vendor/lib64/hw/fingerprint.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/fingerprint.default.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so \
@@ -1149,7 +1097,6 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/halo/proprietary/vendor/lib64/hw/vendor.qti.hardware.servicetracker@1.2-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.servicetracker@1.2-impl.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/hw/vendor.qti.hardware.wifidisplaysession@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.wifidisplaysession@1.0-impl.so \
-    vendor/lenovo/halo/proprietary/vendor/lib64/hw/vibrator.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vibrator.default.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/hw/vulkan.adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vulkan.adreno.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/jcos_nq_client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/jcos_nq_client.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/lib-imscommon.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-imscommon.so \
@@ -1214,7 +1161,6 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/halo/proprietary/vendor/lib64/lib_bt_aptx.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib_bt_aptx.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/lib_bt_ble.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib_bt_ble.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/lib_bt_bundle.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib_bt_bundle.so \
-    vendor/lenovo/halo/proprietary/vendor/lib64/libaacvibrator.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaacvibrator.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/libadaptlaunch.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libadaptlaunch.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/libadm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libadm.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/libadreno_app_profiles.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libadreno_app_profiles.so \
@@ -1309,7 +1255,6 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/halo/proprietary/vendor/lib64/libeva_util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libeva_util.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/libeye_tracking_dsp_sample_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libeye_tracking_dsp_sample_stub.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/libfastcvdsp_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfastcvdsp_stub.so \
-    vendor/lenovo/halo/proprietary/vendor/lib64/libfmpal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfmpal.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/libgame_enhance.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgame_enhance.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/libgarden.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgarden.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/libgarden_haltests_e2e.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgarden_haltests_e2e.so \
@@ -1533,7 +1478,6 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/halo/proprietary/vendor/lib64/libqtigefar.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqtigefar.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/libqtikeymaster4.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqtikeymaster4.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/libqtikeymint.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqtikeymint.so \
-    vendor/lenovo/halo/proprietary/vendor/lib64/libqtivibratoreffect.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqtivibratoreffect.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/libqtr_sdk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqtr_sdk.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/libqvr_cam_cdsp_driver_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqvr_cam_cdsp_driver_stub.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/libqvr_cdsp_driver_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqvr_cdsp_driver_stub.so \
@@ -1663,8 +1607,6 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/halo/proprietary/vendor/lib64/se_nq_extn_client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/se_nq_extn_client.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/sensors.ssc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sensors.ssc.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/soundfx/libasphere.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libasphere.so \
-    vendor/lenovo/halo/proprietary/vendor/lib64/soundfx/libshoebox.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libshoebox.so \
-    vendor/lenovo/halo/proprietary/vendor/lib64/vendor.aac.hardware.richtap.vibrator-V1-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.aac.hardware.richtap.vibrator-V1-ndk_platform.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/vendor.display.color@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.color@1.0.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/vendor.display.color@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.color@1.1.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/vendor.display.color@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.color@1.2.so \
@@ -1736,7 +1678,6 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/halo/proprietary/vendor/lib64/vendor.qti.hardware.limits@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.limits@1.0.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/vendor.qti.hardware.limits@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.limits@1.1.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/vendor.qti.hardware.mwqemadapter@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.mwqemadapter@1.0.so \
-    vendor/lenovo/halo/proprietary/vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.pal@1.0-impl.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/vendor.qti.hardware.power.powermodule@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.power.powermodule@1.0.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.qccsyshal@1.0.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/vendor.qti.hardware.qccsyshal@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.qccsyshal@1.1.so \
@@ -1788,8 +1729,6 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/halo/proprietary/vendor/lib64/vendor.qti.hardware.trustedui@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.trustedui@1.1.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/vendor.qti.hardware.trustedui@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.trustedui@1.2.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.tui_comm@1.0.so \
-    vendor/lenovo/halo/proprietary/vendor/lib64/vendor.qti.hardware.vibrator.impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.vibrator.impl.so \
-    vendor/lenovo/halo/proprietary/vendor/lib64/vendor.qti.hardware.vibrator_dual.device@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.vibrator_dual.device@1.0.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/vendor.qti.hardware.vpp@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.vpp@1.1.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/vendor.qti.hardware.vpp@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.vpp@1.2.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/vendor.qti.hardware.vpp@1.3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.vpp@1.3.so \
@@ -1829,7 +1768,8 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/halo/proprietary/vendor/lib64/vendor.qti.qesdsys-V1-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.qesdsys-V1-ndk_platform.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/vendor.qti.qspmhal@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.qspmhal@1.0-impl.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/vendor.qti.qspmhal@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.qspmhal@1.0.so \
-    vendor/lenovo/halo/proprietary/vendor/lib64/vendor.qti.voiceprint@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.voiceprint@1.0.so
+    vendor/lenovo/halo/proprietary/vendor/lib64/vendor.qti.voiceprint@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.voiceprint@1.0.so \
+    vendor/lenovo/halo/proprietary/vendor/lib64/vendor.zui.hardware.ifaa@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.zui.hardware.ifaa@1.0.so
 
 PRODUCT_PACKAGES += \
     libagm \
@@ -1840,6 +1780,7 @@ PRODUCT_PACKAGES += \
     CACertService \
     CneApp \
     IWlanService \
+    IfaaService \
     TimeService \
     PowerOffAlarm \
     uimgbaservice \
@@ -1854,6 +1795,7 @@ PRODUCT_PACKAGES += \
     uimgbalibrary \
     uimgbamanagerlibrary \
     uimservicelibrary \
+    audiosphere \
     com.qti.dpmframework \
     dpmapi \
     qcrilhook \
@@ -1868,6 +1810,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.ims.rcsuce-V1.0-java \
     vendor.qti.ims.rcsuce-V1.1-java \
     vendor.qti.ims.rcsuce-V1.2-java \
+    android.hardware.biometrics.fingerprint@2.1-service \
     android.hardware.gnss-aidl-service-qti \
     android.hardware.gnss@2.1-service-qti \
     android.hardware.security.keymint-service-qti \
@@ -1885,5 +1828,4 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.radio.ims \
     vendor.qti.hardware.radio.qtiradioconfig \
     vendor.qti.hardware.servicetracker@1.2-service \
-    vendor.qti.hardware.vibrator.service \
     vendor.qti.hardware.vpp@2.0-service
