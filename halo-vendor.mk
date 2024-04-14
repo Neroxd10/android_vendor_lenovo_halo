@@ -72,9 +72,6 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/halo/proprietary/vendor/bin/ATFWD-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/ATFWD-daemon \
     vendor/lenovo/halo/proprietary/vendor/bin/adpl:$(TARGET_COPY_OUT_VENDOR)/bin/adpl \
     vendor/lenovo/halo/proprietary/vendor/bin/adsprpcd:$(TARGET_COPY_OUT_VENDOR)/bin/adsprpcd \
-    vendor/lenovo/halo/proprietary/vendor/bin/agmcap:$(TARGET_COPY_OUT_VENDOR)/bin/agmcap \
-    vendor/lenovo/halo/proprietary/vendor/bin/agmcompressplay:$(TARGET_COPY_OUT_VENDOR)/bin/agmcompressplay \
-    vendor/lenovo/halo/proprietary/vendor/bin/agmplay:$(TARGET_COPY_OUT_VENDOR)/bin/agmplay \
     vendor/lenovo/halo/proprietary/vendor/bin/cdsprpcd:$(TARGET_COPY_OUT_VENDOR)/bin/cdsprpcd \
     vendor/lenovo/halo/proprietary/vendor/bin/cnd:$(TARGET_COPY_OUT_VENDOR)/bin/cnd \
     vendor/lenovo/halo/proprietary/vendor/bin/cnss-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/cnss-daemon \
@@ -97,7 +94,6 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/halo/proprietary/vendor/bin/hw/vendor.display.color@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.display.color@1.0-service \
     vendor/lenovo/halo/proprietary/vendor/bin/hw/vendor.qti.camera.provider@2.7-service_64:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.camera.provider@2.7-service_64 \
     vendor/lenovo/halo/proprietary/vendor/bin/hw/vendor.qti.esepowermanager@1.1-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.esepowermanager@1.1-service \
-    vendor/lenovo/halo/proprietary/vendor/bin/hw/vendor.qti.hardware.AGMIPC@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.AGMIPC@1.0-service \
     vendor/lenovo/halo/proprietary/vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.alarm@1.0-service \
     vendor/lenovo/halo/proprietary/vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service \
     vendor/lenovo/halo/proprietary/vendor/bin/hw/vendor.qti.hardware.eid@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.eid@1.0-service \
@@ -131,7 +127,6 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/halo/proprietary/vendor/bin/init.qti.write.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qti.write.sh \
     vendor/lenovo/halo/proprietary/vendor/bin/irsc_util:$(TARGET_COPY_OUT_VENDOR)/bin/irsc_util \
     vendor/lenovo/halo/proprietary/vendor/bin/ks:$(TARGET_COPY_OUT_VENDOR)/bin/ks \
-    vendor/lenovo/halo/proprietary/vendor/bin/loadalgo:$(TARGET_COPY_OUT_VENDOR)/bin/loadalgo \
     vendor/lenovo/halo/proprietary/vendor/bin/loc_launcher:$(TARGET_COPY_OUT_VENDOR)/bin/loc_launcher \
     vendor/lenovo/halo/proprietary/vendor/bin/lowi-server:$(TARGET_COPY_OUT_VENDOR)/bin/lowi-server \
     vendor/lenovo/halo/proprietary/vendor/bin/mdm_helper:$(TARGET_COPY_OUT_VENDOR)/bin/mdm_helper \
@@ -304,7 +299,6 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/halo/proprietary/vendor/etc/init/vendor.display.color@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.display.color@1.0-service.rc \
     vendor/lenovo/halo/proprietary/vendor/etc/init/vendor.dpmd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dpmd.rc \
     vendor/lenovo/halo/proprietary/vendor/etc/init/vendor.qti.adsprpc-guestos-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.adsprpc-guestos-service.rc \
-    vendor/lenovo/halo/proprietary/vendor/etc/init/vendor.qti.audio-adsprpc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.audio-adsprpc-service.rc \
     vendor/lenovo/halo/proprietary/vendor/etc/init/vendor.qti.camera.provider@2.7-service_64.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.camera.provider@2.7-service_64.rc \
     vendor/lenovo/halo/proprietary/vendor/etc/init/vendor.qti.cdsprpc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.cdsprpc-service.rc \
     vendor/lenovo/halo/proprietary/vendor/etc/init/vendor.qti.diag.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.diag.rc \
@@ -1227,11 +1221,6 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/halo/proprietary/vendor/lib64/libadreno_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libadreno_utils.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/libadsp_default_listener.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libadsp_default_listener.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/libadsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libadsprpc.so \
-    vendor/lenovo/halo/proprietary/vendor/lib64/libagm_compress_plugin.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libagm_compress_plugin.so \
-    vendor/lenovo/halo/proprietary/vendor/lib64/libagm_mixer_plugin.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libagm_mixer_plugin.so \
-    vendor/lenovo/halo/proprietary/vendor/lib64/libagm_pcm_plugin.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libagm_pcm_plugin.so \
-    vendor/lenovo/halo/proprietary/vendor/lib64/libagmclient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libagmclient.so \
-    vendor/lenovo/halo/proprietary/vendor/lib64/libagmmixer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libagmmixer.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/libaidenoiser.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaidenoiser.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/libaidenoiserv2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaidenoiserv2.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/libapengine.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libapengine.so \
@@ -1255,7 +1244,6 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/halo/proprietary/vendor/lib64/libaw_portrait_mask.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaw_portrait_mask.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/libbacklight-calib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbacklight-calib.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/libbatching.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbatching.so \
-    vendor/lenovo/halo/proprietary/vendor/lib64/libbatterylistener.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbatterylistener.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/libbitmlengine.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbitmlengine.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/libbitmlenginev2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbitmlenginev2.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/libbluetooth_audio_session_qti.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbluetooth_audio_session_qti.so \
@@ -1361,7 +1349,6 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/halo/proprietary/vendor/lib64/libllvm-qcom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libllvm-qcom.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/libllvm-qgl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libllvm-qgl.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/liblmutils-ns.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblmutils-ns.so \
-    vendor/lenovo/halo/proprietary/vendor/lib64/libloadalgo_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libloadalgo_stub.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/libloc_api_v02.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libloc_api_v02.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/libloc_api_wds.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libloc_api_wds.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/libloc_core.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libloc_core.so \
@@ -1428,7 +1415,6 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/halo/proprietary/vendor/lib64/libops.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libops.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/libos.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libos.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/libpal_net_if.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpal_net_if.so \
-    vendor/lenovo/halo/proprietary/vendor/lib64/libpalclient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpalclient.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/libpandora.algorithm.360ai.PortraitMask.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpandora.algorithm.360ai.PortraitMask.1.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/libpandora.algorithm.arcsoft.hdrchecker.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpandora.algorithm.arcsoft.hdrchecker.1.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/libpandora.algorithm.arcsoft.lowlighthdr.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpandora.algorithm.arcsoft.lowlighthdr.1.so \
@@ -1460,7 +1446,6 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/halo/proprietary/vendor/lib64/libperfgluelayer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libperfgluelayer.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/libperfioctl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libperfioctl.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/libperipheral_client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libperipheral_client.so \
-    vendor/lenovo/halo/proprietary/vendor/lib64/libplatformconfig.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libplatformconfig.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/libpowercallback.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpowercallback.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/libpowercore.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpowercore.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/libprekill.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libprekill.so \
@@ -1591,7 +1576,6 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/halo/proprietary/vendor/lib64/libsn100u_fw.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsn100u_fw.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/libsnapdragoncolor-manager.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsnapdragoncolor-manager.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/libsnapdragoncolor-qdcm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsnapdragoncolor-qdcm.so \
-    vendor/lenovo/halo/proprietary/vendor/lib64/libsndcardparser.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsndcardparser.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/libsns_api.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsns_api.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/libsns_device_mode_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsns_device_mode_stub.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/libsns_direct_channel_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsns_direct_channel_stub.so \
@@ -1709,7 +1693,6 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/halo/proprietary/vendor/lib64/vendor.qti.esepowermanager@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.esepowermanager@1.1.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/vendor.qti.gnss-V1-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.gnss-V1-ndk_platform.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/vendor.qti.gnss-service.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.gnss-service.so \
-    vendor/lenovo/halo/proprietary/vendor/lib64/vendor.qti.hardware.AGMIPC@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.AGMIPC@1.0.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.ListenSoundModel@1.0-impl.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.ListenSoundModel@1.0.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/vendor.qti.hardware.alarm@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.alarm@1.0.so \
@@ -1852,8 +1835,8 @@ PRODUCT_PACKAGES += \
     libagm \
     libar-pal \
     libvmmem \
-    vendor.qti.hardware.AGMIPC@1.0-impl \
     libfastcvopt \
+    vendor.qti.hardware.AGMIPC@1.0-impl \
     CACertService \
     CneApp \
     IWlanService \
@@ -1892,8 +1875,6 @@ PRODUCT_PACKAGES += \
     c2_manifest_vendor_audio \
     dataconnection-saidl \
     manifest_android.hardware.drm@1.4-service.widevine \
-    manifest_non_qmaa \
-    manifest_non_qmaa_extn \
     qtiradio-saidl \
     vendor.qti.diag.hal.service \
     vendor.qti.gnss-service \
