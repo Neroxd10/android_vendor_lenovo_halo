@@ -83,6 +83,7 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/halo/proprietary/vendor/bin/engine-service:$(TARGET_COPY_OUT_VENDOR)/bin/engine-service \
     vendor/lenovo/halo/proprietary/vendor/bin/feature_enabler_client:$(TARGET_COPY_OUT_VENDOR)/bin/feature_enabler_client \
     vendor/lenovo/halo/proprietary/vendor/bin/garden_app:$(TARGET_COPY_OUT_VENDOR)/bin/garden_app \
+    vendor/lenovo/halo/proprietary/vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.biometrics.fingerprint@2.1-service \
     vendor/lenovo/halo/proprietary/vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.bluetooth@1.0-service-qti \
     vendor/lenovo/halo/proprietary/vendor/bin/hw/android.hardware.drm@1.4-service.widevine:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.drm@1.4-service.widevine \
     vendor/lenovo/halo/proprietary/vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.gatekeeper@1.0-service-qti \
@@ -196,6 +197,15 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/halo/proprietary/vendor/etc/acdbdata/waipio_mtp/MTP_acdb_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/waipio_mtp/MTP_acdb_cal.acdb \
     vendor/lenovo/halo/proprietary/vendor/etc/acdbdata/waipio_mtp/MTP_workspaceFileXml.qwsp:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/waipio_mtp/MTP_workspaceFileXml.qwsp \
     vendor/lenovo/halo/proprietary/vendor/etc/apdr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/apdr.conf \
+    vendor/lenovo/halo/proprietary/vendor/etc/audio/sku_cape/audio_effects.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_cape/audio_effects.conf \
+    vendor/lenovo/halo/proprietary/vendor/etc/audio/sku_cape/mixer_paths_waipio_cdp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_cape/mixer_paths_waipio_cdp.xml \
+    vendor/lenovo/halo/proprietary/vendor/etc/audio/sku_cape/mixer_paths_waipio_mtp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_cape/mixer_paths_waipio_mtp.xml \
+    vendor/lenovo/halo/proprietary/vendor/etc/audio/sku_cape/mixer_paths_waipio_qrd.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_cape/mixer_paths_waipio_qrd.xml \
+    vendor/lenovo/halo/proprietary/vendor/etc/audio/sku_cape/resourcemanager_upd.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_cape/resourcemanager_upd.xml \
+    vendor/lenovo/halo/proprietary/vendor/etc/audio/sku_cape/resourcemanager_waipio_cdp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_cape/resourcemanager_waipio_cdp.xml \
+    vendor/lenovo/halo/proprietary/vendor/etc/audio/sku_cape/resourcemanager_waipio_mtp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_cape/resourcemanager_waipio_mtp.xml \
+    vendor/lenovo/halo/proprietary/vendor/etc/audio/sku_cape/resourcemanager_waipio_qrd.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_cape/resourcemanager_waipio_qrd.xml \
+    vendor/lenovo/halo/proprietary/vendor/etc/backend_conf.xml:$(TARGET_COPY_OUT_VENDOR)/etc/backend_conf.xml \
     vendor/lenovo/halo/proprietary/vendor/etc/batching.conf:$(TARGET_COPY_OUT_VENDOR)/etc/batching.conf \
     vendor/lenovo/halo/proprietary/vendor/etc/cacert_location.pem:$(TARGET_COPY_OUT_VENDOR)/etc/cacert_location.pem \
     vendor/lenovo/halo/proprietary/vendor/etc/camera/3840black.UBWCTP10:$(TARGET_COPY_OUT_VENDOR)/etc/camera/3840black.UBWCTP10 \
@@ -203,6 +213,7 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/halo/proprietary/vendor/etc/camera/cal_w48_u16_default.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/cal_w48_u16_default.bin \
     vendor/lenovo/halo/proprietary/vendor/etc/camera/camxoverridesettings.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camxoverridesettings.txt \
     vendor/lenovo/halo/proprietary/vendor/etc/camera/eisoverridesettings.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/eisoverridesettings.txt \
+    vendor/lenovo/halo/proprietary/vendor/etc/card-defs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/card-defs.xml \
     vendor/lenovo/halo/proprietary/vendor/etc/charger_fw_fstab.qti:$(TARGET_COPY_OUT_VENDOR)/etc/charger_fw_fstab.qti \
     vendor/lenovo/halo/proprietary/vendor/etc/cne/mwqem.conf:$(TARGET_COPY_OUT_VENDOR)/etc/cne/mwqem.conf \
     vendor/lenovo/halo/proprietary/vendor/etc/cne/profileMwqem.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/profileMwqem.xml \
@@ -258,6 +269,7 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/halo/proprietary/vendor/etc/gpfspath_oem_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gpfspath_oem_config.xml \
     vendor/lenovo/halo/proprietary/vendor/etc/gps.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps.conf \
     vendor/lenovo/halo/proprietary/vendor/etc/init.qti.fm.sh:$(TARGET_COPY_OUT_VENDOR)/etc/init.qti.fm.sh \
+    vendor/lenovo/halo/proprietary/vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc \
     vendor/lenovo/halo/proprietary/vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.0-service-qti.rc \
     vendor/lenovo/halo/proprietary/vendor/etc/init/android.hardware.drm@1.1-service.wfdhdcp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.1-service.wfdhdcp.rc \
     vendor/lenovo/halo/proprietary/vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.4-service.widevine.rc \
@@ -343,47 +355,6 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/halo/proprietary/vendor/etc/lm/SilkyScrollsFeature.xml:$(TARGET_COPY_OUT_VENDOR)/etc/lm/SilkyScrollsFeature.xml \
     vendor/lenovo/halo/proprietary/vendor/etc/lm/sPLHFeature.xml:$(TARGET_COPY_OUT_VENDOR)/etc/lm/sPLHFeature.xml \
     vendor/lenovo/halo/proprietary/vendor/etc/lowi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/lowi.conf \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/1mic/LVACFS_Calibration360.dat:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/1mic/LVACFS_Calibration360.dat \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/1mic/LVACFS_Configuration.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/1mic/LVACFS_Configuration.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID10_He_USB_Digital_48K.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID10_He_USB_Digital_48K.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID11_He_USB_Digital_16K.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID11_He_USB_Digital_16K.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID12_He_BT_16K.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID12_He_BT_16K.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID1_MIC_HDR_standard.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID1_MIC_HDR_standard.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID2_MIC_HDR_voicefocus.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID2_MIC_HDR_voicefocus.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID3_MIC_HDR_wideband.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID3_MIC_HDR_wideband.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID5_MIC_Normal.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID5_MIC_Normal.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID6_MIC_App.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID6_MIC_App.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID7_MIC_He.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID7_MIC_He.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID8_MIC_He_App.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID8_MIC_He_App.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID9_He_Unprocess.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID9_He_Unprocess.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/2mic/4mic/LVACFS_Calibration360.dat:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/4mic/LVACFS_Calibration360.dat \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/2mic/4mic/LVACFS_Configuration.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/4mic/LVACFS_Configuration.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/2mic/4mic/LVIMFS_Parameter_xxxx_ID1_MIC_HDR_standard.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/4mic/LVIMFS_Parameter_xxxx_ID1_MIC_HDR_standard.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/2mic/4mic/LVIMFS_Parameter_xxxx_ID2_MIC_HDR_voicefocus.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/4mic/LVIMFS_Parameter_xxxx_ID2_MIC_HDR_voicefocus.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/2mic/4mic/LVIMFS_Parameter_xxxx_ID3_MIC_HDR_wideband.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/4mic/LVIMFS_Parameter_xxxx_ID3_MIC_HDR_wideband.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/2mic/4mic/LVIMFS_Parameter_xxxx_ID4_MIC_Cam.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/4mic/LVIMFS_Parameter_xxxx_ID4_MIC_Cam.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/2mic/4mic/audiozoom_2.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/4mic/audiozoom_2.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/2mic/LVACFS_Calibration360_2mic.dat:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/LVACFS_Calibration360_2mic.dat \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/2mic/LVACFS_Configuration.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/LVACFS_Configuration.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID10_He_USB_Digital_48K.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID10_He_USB_Digital_48K.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID11_He_USB_Digital_16K.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID11_He_USB_Digital_16K.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID12_He_BT_16K.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID12_He_BT_16K.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID1_MIC_HDR_standard.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID1_MIC_HDR_standard.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID2_MIC_HDR_voicefocus.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID2_MIC_HDR_voicefocus.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID3_MIC_HDR_wideband.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID3_MIC_HDR_wideband.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID5_MIC_Normal.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID5_MIC_Normal.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID6_MIC_App.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID6_MIC_App.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID7_MIC_He.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID7_MIC_He.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID8_MIC_He_App.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID8_MIC_He_App.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID9_He_Unprocess.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID9_He_Unprocess.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/4mic/LVACFS_Calibration360.dat:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/4mic/LVACFS_Calibration360.dat \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/4mic/LVACFS_Configuration.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/4mic/LVACFS_Configuration.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/4mic/LVIMFS_Parameter_xxxx_ID13_MIC_Cam_front.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/4mic/LVIMFS_Parameter_xxxx_ID13_MIC_Cam_front.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/4mic/LVIMFS_Parameter_xxxx_ID1_MIC_HDR_standard.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/4mic/LVIMFS_Parameter_xxxx_ID1_MIC_HDR_standard.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/4mic/LVIMFS_Parameter_xxxx_ID2_MIC_HDR_voicefocus.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/4mic/LVIMFS_Parameter_xxxx_ID2_MIC_HDR_voicefocus.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/4mic/LVIMFS_Parameter_xxxx_ID3_MIC_HDR_wideband.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/4mic/LVIMFS_Parameter_xxxx_ID3_MIC_HDR_wideband.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/4mic/LVIMFS_Parameter_xxxx_ID4_MIC_Cam_back.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/4mic/LVIMFS_Parameter_xxxx_ID4_MIC_Cam_back.txt \
-    vendor/lenovo/halo/proprietary/vendor/etc/lvacfs_params/4mic/audiozoom_4.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/4mic/audiozoom_4.txt \
     vendor/lenovo/halo/proprietary/vendor/etc/media_cape/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/media_cape/video_system_specs.json \
     vendor/lenovo/halo/proprietary/vendor/etc/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
     vendor/lenovo/halo/proprietary/vendor/etc/media_codecs_c2_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2_audio.xml \
@@ -399,6 +370,7 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/halo/proprietary/vendor/etc/media_profiles_ukee.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_ukee.xml \
     vendor/lenovo/halo/proprietary/vendor/etc/media_taro/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/media_taro/video_system_specs.json \
     vendor/lenovo/halo/proprietary/vendor/etc/media_ukee/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/media_ukee/video_system_specs.json \
+    vendor/lenovo/halo/proprietary/vendor/etc/microphone_characteristics.xml:$(TARGET_COPY_OUT_VENDOR)/etc/microphone_characteristics.xml \
     vendor/lenovo/halo/proprietary/vendor/etc/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf \
     vendor/lenovo/halo/proprietary/vendor/etc/perf/avcsysnodesconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/avcsysnodesconfigs.xml \
     vendor/lenovo/halo/proprietary/vendor/etc/perf/commonresourceconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/commonresourceconfigs.xml \
@@ -579,6 +551,7 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/halo/proprietary/vendor/etc/thermal-engine_sensor_0.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine_sensor_0.conf \
     vendor/lenovo/halo/proprietary/vendor/etc/thermal-engine_sensor_1.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine_sensor_1.conf \
     vendor/lenovo/halo/proprietary/vendor/etc/thermal_user_case.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_user_case.conf \
+    vendor/lenovo/halo/proprietary/vendor/etc/usecaseKvManager.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usecaseKvManager.xml \
     vendor/lenovo/halo/proprietary/vendor/etc/wfdconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/wfdconfig.xml \
     vendor/lenovo/halo/proprietary/vendor/etc/wifi/icm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/icm.conf \
     vendor/lenovo/halo/proprietary/vendor/etc/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
@@ -613,21 +586,6 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/halo/proprietary/vendor/firmware/CAMERA_ICP.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/CAMERA_ICP.mdt \
     vendor/lenovo/halo/proprietary/vendor/firmware/CAMERA_ICP_170.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/CAMERA_ICP_170.elf \
     vendor/lenovo/halo/proprietary/vendor/firmware/CAMERA_ICP_480.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/CAMERA_ICP_480.elf \
-    vendor/lenovo/halo/proprietary/vendor/firmware/a660_sqe.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/a660_sqe.fw \
-    vendor/lenovo/halo/proprietary/vendor/firmware/a662_gmu.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/a662_gmu.bin \
-    vendor/lenovo/halo/proprietary/vendor/firmware/a662_zap.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/a662_zap.b00 \
-    vendor/lenovo/halo/proprietary/vendor/firmware/a662_zap.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/a662_zap.b01 \
-    vendor/lenovo/halo/proprietary/vendor/firmware/a662_zap.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/a662_zap.b02 \
-    vendor/lenovo/halo/proprietary/vendor/firmware/a662_zap.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/a662_zap.elf \
-    vendor/lenovo/halo/proprietary/vendor/firmware/a662_zap.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/a662_zap.mbn \
-    vendor/lenovo/halo/proprietary/vendor/firmware/a662_zap.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/a662_zap.mdt \
-    vendor/lenovo/halo/proprietary/vendor/firmware/a710_sqe.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/a710_sqe.fw \
-    vendor/lenovo/halo/proprietary/vendor/firmware/a710_zap.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/a710_zap.b00 \
-    vendor/lenovo/halo/proprietary/vendor/firmware/a710_zap.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/a710_zap.b01 \
-    vendor/lenovo/halo/proprietary/vendor/firmware/a710_zap.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/a710_zap.b02 \
-    vendor/lenovo/halo/proprietary/vendor/firmware/a710_zap.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/a710_zap.elf \
-    vendor/lenovo/halo/proprietary/vendor/firmware/a710_zap.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/a710_zap.mbn \
-    vendor/lenovo/halo/proprietary/vendor/firmware/a710_zap.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/a710_zap.mdt \
     vendor/lenovo/halo/proprietary/vendor/firmware/a730_sqe.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/a730_sqe.fw \
     vendor/lenovo/halo/proprietary/vendor/firmware/a730_zap.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/a730_zap.b00 \
     vendor/lenovo/halo/proprietary/vendor/firmware/a730_zap.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/a730_zap.b01 \
@@ -1131,6 +1089,7 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/halo/proprietary/vendor/lib64/hw/camera.qcom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/camera.qcom.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/hw/com.dsi.ant@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/com.dsi.ant@1.0-impl.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/hw/com.qti.chi.override.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/com.qti.chi.override.so \
+    vendor/lenovo/halo/proprietary/vendor/lib64/hw/fingerprint.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/fingerprint.default.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/hw/sound_trigger.primary.taro.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/sound_trigger.primary.taro.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so \
     vendor/lenovo/halo/proprietary/vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so \
@@ -1868,6 +1827,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.ims.rcsuce-V1.0-java \
     vendor.qti.ims.rcsuce-V1.1-java \
     vendor.qti.ims.rcsuce-V1.2-java \
+    android.hardware.biometrics.fingerprint@2.1-service \
     android.hardware.gnss-aidl-service-qti \
     android.hardware.gnss@2.1-service-qti \
     android.hardware.security.keymint-service-qti \
