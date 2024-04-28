@@ -70,7 +70,7 @@ echo 0 > /sys/devices/system/cpu/cpufreq/policy0/walt/down_rate_limit_us
 echo 0 > /sys/devices/system/cpu/cpufreq/policy0/walt/up_rate_limit_us
 echo 1228800 > /sys/devices/system/cpu/cpufreq/policy0/walt/hispeed_freq
 echo 556800 > /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
-echo 1804800 > /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq
+echo 2016000 > /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq
 echo 1 > /sys/devices/system/cpu/cpufreq/policy0/walt/pl
 
 # configure input boost settings
