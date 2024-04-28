@@ -1847,4 +1847,5 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.servicetracker@1.2-service \
     vendor.qti.hardware.vibrator.service \
     vendor.qti.hardware.vpp@2.0-service \
-    Lineage
+    Lineage \
+    GameSpace
