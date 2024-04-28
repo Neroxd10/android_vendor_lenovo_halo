@@ -533,7 +533,6 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/halo/proprietary/vendor/etc/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf \
     vendor/lenovo/halo/proprietary/vendor/etc/thermal-engine_sensor_0.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine_sensor_0.conf \
     vendor/lenovo/halo/proprietary/vendor/etc/thermal-engine_sensor_1.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine_sensor_1.conf \
-    vendor/lenovo/halo/proprietary/vendor/etc/thermal_user_case.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_user_case.conf \
     vendor/lenovo/halo/proprietary/vendor/etc/usecaseKvManager.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usecaseKvManager.xml \
     vendor/lenovo/halo/proprietary/vendor/etc/wfdconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/wfdconfig.xml \
     vendor/lenovo/halo/proprietary/vendor/etc/wifi/icm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/icm.conf \
