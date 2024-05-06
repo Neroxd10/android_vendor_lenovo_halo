@@ -9,19 +9,14 @@ ddr_type=`od -An -tx /proc/device-tree/memory/ddr_device_type`
 ddr_type4="07"
 ddr_type5="08"
 
-# Core control parameters for gold
-echo 2 > /sys/devices/system/cpu/cpu4/core_ctl/min_cpus
-echo 60 > /sys/devices/system/cpu/cpu4/core_ctl/busy_up_thres
-echo 30 > /sys/devices/system/cpu/cpu4/core_ctl/busy_down_thres
-echo 100 > /sys/devices/system/cpu/cpu4/core_ctl/offline_delay_ms
-echo 3 > /sys/devices/system/cpu/cpu4/core_ctl/task_thres
+echo 14 > /sys/class/kgsl/kgsl-3d0/default_pwrlevel
 
 # Core control parameters for gold+
 echo 0 > /sys/devices/system/cpu/cpu7/core_ctl/min_cpus
-echo 60 > /sys/devices/system/cpu/cpu7/core_ctl/busy_up_thres
-echo 30 > /sys/devices/system/cpu/cpu7/core_ctl/busy_down_thres
-echo 100 > /sys/devices/system/cpu/cpu7/core_ctl/offline_delay_ms
-echo 1 > /sys/devices/system/cpu/cpu7/core_ctl/task_thres
+echo 0 > /sys/devices/system/cpu/cpu7/core_ctl/busy_up_thres
+echo 0 > /sys/devices/system/cpu/cpu7/core_ctl/busy_down_thres
+echo 0 > /sys/devices/system/cpu/cpu7/core_ctl/offline_delay_ms
+echo 0 > /sys/devices/system/cpu/cpu7/core_ctl/task_thres
 
 # Controls how many more tasks should be eligible to run on gold CPUs
 # w.r.t number of gold CPUs available to trigger assist (max number of
@@ -31,28 +26,25 @@ echo 1 > /sys/devices/system/cpu/cpu7/core_ctl/task_thres
 # Setting to 1 by default which means there should be at least
 # 4 tasks eligible to run on gold cluster (tasks running on gold cores
 # plus misfit tasks on silver cores) to trigger assitance from gold+.
-echo 1 > /sys/devices/system/cpu/cpu7/core_ctl/nr_prev_assist_thresh
-
-# Disable Core control on silver
-echo 0 > /sys/devices/system/cpu/cpu0/core_ctl/enable
+echo 0 > /sys/devices/system/cpu/cpu7/core_ctl/nr_prev_assist_thresh
 
 # Setting b.L scheduler parameters
-echo 85 85 > /proc/sys/walt/sched_downmigrate
-echo 95 95 > /proc/sys/walt/sched_upmigrate
-echo 85 > /proc/sys/walt/sched_group_downmigrate
-echo 100 > /proc/sys/walt/sched_group_upmigrate
-echo 1 > /proc/sys/walt/sched_walt_rotate_big_tasks
-echo 400000000 > /proc/sys/walt/sched_coloc_downmigrate_ns
-echo 39000000 39000000 39000000 39000000 39000000 39000000 39000000 5000000 > /proc/sys/walt/sched_coloc_busy_hyst_cpu_ns
-echo 240 > /proc/sys/walt/sched_coloc_busy_hysteresis_enable_cpus
-echo 10 10 10 10 10 10 10 95 > /proc/sys/walt/sched_coloc_busy_hyst_cpu_busy_pct
-echo 5000000 5000000 5000000 5000000 5000000 5000000 5000000 2000000 > /proc/sys/walt/sched_util_busy_hyst_cpu_ns
-echo 255 > /proc/sys/walt/sched_util_busy_hysteresis_enable_cpus
-echo 15 15 15 15 15 15 15 15 > /proc/sys/walt/sched_util_busy_hyst_cpu_util
+echo 0 0 > /proc/sys/walt/sched_downmigrate
+echo 0 0 > /proc/sys/walt/sched_upmigrate
+echo 0 > /proc/sys/walt/sched_group_downmigrate
+echo 0 > /proc/sys/walt/sched_group_upmigrate
+echo 0 > /proc/sys/walt/sched_walt_rotate_big_tasks
+echo 0 > /proc/sys/walt/sched_coloc_downmigrate_ns
+echo 0 0 0 0 0 0 0 0 > /proc/sys/walt/sched_coloc_busy_hyst_cpu_ns
+echo 0 > /proc/sys/walt/sched_coloc_busy_hysteresis_enable_cpus
+echo 0 0 0 0 0 0 0 0 > /proc/sys/walt/sched_coloc_busy_hyst_cpu_busy_pct
+echo 0 0 0 0 0 0 0 0 > /proc/sys/walt/sched_util_busy_hyst_cpu_ns
+echo 0 > /proc/sys/walt/sched_util_busy_hysteresis_enable_cpus
+echo 0 0 0 0 0 0 0 0 > /proc/sys/walt/sched_util_busy_hyst_cpu_util
 
 # set the threshold for low latency task boost feature which prioritize
 # binder activity tasks
-echo 325 > /proc/sys/walt/walt_low_latency_task_threshold
+echo 0 > /proc/sys/walt/walt_low_latency_task_threshold
 
 # cpuset parameters
 echo 0-3 > /dev/cpuset/background/cpus
@@ -68,31 +60,35 @@ echo 0 > /proc/sys/kernel/sched_util_clamp_min_rt_default
 echo "walt" > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
 echo 0 > /sys/devices/system/cpu/cpufreq/policy0/walt/down_rate_limit_us
 echo 0 > /sys/devices/system/cpu/cpufreq/policy0/walt/up_rate_limit_us
-echo 1228800 > /sys/devices/system/cpu/cpufreq/policy0/walt/hispeed_freq
-echo 556800 > /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
+echo 0 > /sys/devices/system/cpu/cpufreq/policy0/walt/hispeed_freq
+echo 300000 > /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
 echo 2016000 > /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq
 echo 1 > /sys/devices/system/cpu/cpufreq/policy0/walt/pl
 
 # configure input boost settings
-echo 1132800 0 0 0 0 0 0 0 > /proc/sys/walt/input_boost/input_boost_freq
-echo 100 > /proc/sys/walt/input_boost/input_boost_ms
+# disable input_boost by default
+#echo 1132800 0 0 0 0 0 0 0 > /proc/sys/walt/input_boost/input_boost_freq
 
 # configure governor settings for gold cluster
 echo "walt" > /sys/devices/system/cpu/cpufreq/policy4/scaling_governor
 echo 0 > /sys/devices/system/cpu/cpufreq/policy4/walt/down_rate_limit_us
 echo 0 > /sys/devices/system/cpu/cpufreq/policy4/walt/up_rate_limit_us
-echo 1555200 > /sys/devices/system/cpu/cpufreq/policy4/walt/hispeed_freq
+echo 0 > /sys/devices/system/cpu/cpufreq/policy4/walt/hispeed_freq
+echo 633600 > /sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq
+echo 1209600 > /sys/devices/system/cpu/cpufreq/policy4/scaling_max_freq
 echo 1 > /sys/devices/system/cpu/cpufreq/policy4/walt/pl
 
 # configure governor settings for gold+ cluster
 echo "walt" > /sys/devices/system/cpu/cpufreq/policy7/scaling_governor
 echo 0 > /sys/devices/system/cpu/cpufreq/policy7/walt/down_rate_limit_us
 echo 0 > /sys/devices/system/cpu/cpufreq/policy7/walt/up_rate_limit_us
-echo 1651200 > /sys/devices/system/cpu/cpufreq/policy7/walt/hispeed_freq
+echo 0 > /sys/devices/system/cpu/cpufreq/policy7/walt/hispeed_freq
+echo 787200 > /sys/devices/system/cpu/cpufreq/policy7/scaling_min_freq
+echo 1036800 > /sys/devices/system/cpu/cpufreq/policy7/scaling_max_freq
 echo 1 > /sys/devices/system/cpu/cpufreq/policy7/walt/pl
 
 # colocation V3 settings
-echo 768000 > /sys/devices/system/cpu/cpufreq/policy4/walt/rtg_boost_freq
+echo 633600 > /sys/devices/system/cpu/cpufreq/policy4/walt/rtg_boost_freq
 
 # configure bus-dcvs
 bus_dcvs="/sys/devices/system/cpu/bus_dcvs"
@@ -172,6 +168,9 @@ done
 
 #set s2idle as default
 echo s2idle > /sys/power/mem_sleep
+
+echo 912000000 >/sys/class/kgsl/kgsl-3d0/devfreq/max_freq 
+echo 150000000 >/sys/class/kgsl/kgsl-3d0/devfreq/min_freq 
 
 #Enable LPM
 echo N > /sys/devices/system/cpu/qcom_lpm/parameters/sleep_disabled
