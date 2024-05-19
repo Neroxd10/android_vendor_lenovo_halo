@@ -560,3 +560,24 @@ prebuilt_etc_xml {
 	soc_specific: true,
 }
 
+android_app_import {
+	name: "Resources",
+	owner: "lenovo",
+	apk: "proprietary/vendor/app/Resources/Resources.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	soc_specific: true,
+}
+
+android_app_import {
+	name: "MotoCamera",
+	owner: "lenovo",
+	apk: "proprietary/vendor/app/MotoCamera/MotoCamera.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	soc_specific: true,
+}
